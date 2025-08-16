@@ -1,67 +1,68 @@
-// Variables y Tipos de Datos
+// 5. Arrays
 
-// 1. Declara una constante nombre con tu nombre y una variable edad con tu edad. Luego muestra ambos en consola.
+// 1. Crea un array de 5 frutas. Muestra la primera y última usando índices.
 
-const nombre = 'Carlos';
-const edad = 37;
+// let frutas = ['uvas', 'pera', 'mango', 'manzana', 'melon'];
 
-console.log(nombre);
-console.log(edad);
+// const primerayUltima = (arr) => {
+//     if(arr.length === 1){
+//         return [arr[0]];
+//     }
+//     if(arr.length === 0){
+//         return [];
+//     }
+//     return [arr[0], arr[arr.length - 1]];
+// }
 
+// console.log(primerayUltima(frutas));
 
-// 2. Declara una variable activo con valor true, y luego reasígnala a false. ¿Qué sucede si intentas hacerlo con const? // error: Uncaught TypeError: Assignment to constant variable.
+// 2. Usa .map() para convertir un array de nombres a un array con cada nombre en mayúsculas.
 
-// let activo = true;
-// console.log(activo);
+// let nombres = ['carlos', 'luis', 'karla', 'amanda'];
 
-// activo = false;
+// let nombreMayusculas = nombres.map(nombre => {
+//     return nombre.toUpperCase();
+// });
 
-// console.log(activo);
+// console.log(nombres);
+// console.log(nombreMayusculas);
 
-//¿Qué sucede si intentas hacerlo con const? // error: Uncaught TypeError: Assignment to constant variable.
+// 3. Usa .filter() para obtener los números mayores a 10 de [3, 12, 7, 20, 5].
 
-// 3. Crea una variable precioProducto con un número, y una variable esDisponible con un booleano. Muestra un mensaje que diga:
-// Producto cuesta $X y está disponible: true/false.
+// let numeros = [3, 12, 7, 20, 5];
 
-// let precioProducto = 8000;
-// let esDisponible = true;
+// let numMayores = numeros.filter(num => {
+//     return num > 10;
+// }); 
 
-// let mensaje = `Producto cuesta $${precioProducto} y está disponible: ${esDisponible}.`;
+// console.log(numMayores);
 
-// console.log(mensaje);
+// 4. Crea una función que reciba un array de personas (objetos con nombre y edad) y devuelva un array solo con los mayores de 18.
 
+// const usuarios = [
+//     {nombre: 'carlos', edad: 37},
+//     {nombre: 'luis', edad: 18},
+//     {nombre: 'karla', edad: 32},
+//     {nombre: 'amanda', edad: 3},    
+// ];
 
+// const mayores = (arr) => {
+//     return arr.filter(usuario => {
+//         return usuario.edad >= 18;
+//     });
+// }
 
-// 4. Declara un array con tres colores favoritos y un objeto usuario con
-// nombre, edad y si está activo.
+// console.log(mayores(usuarios));
 
-// const array = ['azul', 'negro', 'blanco', {nombre: 'carlos', edad: 37, activo: true}];
+// 5. Usa .find() para buscar si existe una fruta "manzana" en un array, y .includes() para saber si "banana" está en él.
 
-// console.log(array);
+// let frutas = ['pera', 'mango', 'manzana', 'banana', 'manzana'];
 
-// 5. Usa typeof para imprimir en consola el tipo de cada una de las
-// siguientes variables: un número, un string, un booleano, un array,
-// un objeto y null.
+// let existeManzana = frutas.find(fruta => {
+//     return fruta === 'manzana';
+// });
 
-// let num = 5;
-// let string = 'Hola';
-// let booleano = true;
-// const obj = {nombre: 'carlos', edad: 37};
-// const arr = ['azul', 'negro', 'blanco'];
-// let nulo = null;
+// let existeBanana = frutas.includes('banana');
 
-// console.log(typeof num);
-// console.log(typeof string);
-// console.log(typeof booleano);
-// console.log(typeof obj); //object
-// console.log(typeof arr); //object typeof [] también devuelve "object", pero para saber si es un arreglo se usa: Array.isArray(arr)
-// console.log(typeof nulo); //object typeof null devuelve "object" por un error histórico en JavaScript.
-
-// ¿Por qué no lo corrigieron después?
-// Cuando se dieron cuenta del error, ya había muchísimo código en la web que dependía de ese comportamiento.
-// Si lo cambiaban, se romperían aplicaciones y páginas.
-// Entonces decidieron dejarlo así para siempre (es lo que se llama un legacy bug o error heredado).
-
-// La forma correcta de verificar null es con === null.
-
-// console.log(Array.isArray(arr));
+// console.log(existeManzana);
+// console.log(existeBanana);
