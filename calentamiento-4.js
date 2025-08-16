@@ -1,67 +1,84 @@
-// Variables y Tipos de Datos
+// 4. Estructuras de control
 
-// 1. Declara una constante nombre con tu nombre y una variable edad con tu edad. Luego muestra ambos en consola.
+// 1. Usa un if para verificar si una variable nota es mayor o igual a 60.
+// Muestra "Aprobado" o "Reprobado".
 
-const nombre = 'Carlos';
-const edad = 37;
+// let nota = 60;
 
-console.log(nombre);
-console.log(edad);
+// if(nota >= 60){
+//    console.log('Aprobado');
+// }else{
+//    console.log('Reprobado'); 
+// }
 
-
-// 2. Declara una variable activo con valor true, y luego reasígnala a false. ¿Qué sucede si intentas hacerlo con const? // error: Uncaught TypeError: Assignment to constant variable.
-
-// let activo = true;
-// console.log(activo);
-
-// activo = false;
-
-// console.log(activo);
-
-//¿Qué sucede si intentas hacerlo con const? // error: Uncaught TypeError: Assignment to constant variable.
-
-// 3. Crea una variable precioProducto con un número, y una variable esDisponible con un booleano. Muestra un mensaje que diga:
-// Producto cuesta $X y está disponible: true/false.
-
-// let precioProducto = 8000;
-// let esDisponible = true;
-
-// let mensaje = `Producto cuesta $${precioProducto} y está disponible: ${esDisponible}.`;
-
-// console.log(mensaje);
+// 2. Escribe una función que reciba un número y devuelva "fizz" si es divisible por 3, "buzz" si por 5, o "fizzbuzz" si por ambos.
 
 
+// function fizzBuzz(num) {
+//     switch (true) {
+//         case num % 3 == 0 && num % 5 == 0:
+//             console.log('fizzbuzz');
+//             break;
+//         case num % 3 == 0:
+//             console.log('fizz');
+//             break; 
+//         case num % 5 == 0:
+//             console.log('buzz');
+//             break;    
+    
+//         default:
+//             console.log(num);
+//             break;
+//     }
 
-// 4. Declara un array con tres colores favoritos y un objeto usuario con
-// nombre, edad y si está activo.
+// }
+ 
+// fizzBuzz(3);  
+// fizzBuzz(5);  
+// fizzBuzz(15); 
+// fizzBuzz(7); 
 
-// const array = ['azul', 'negro', 'blanco', {nombre: 'carlos', edad: 37, activo: true}];
 
-// console.log(array);
+// 3. Declara una variable rol = "admin" y usa un switch para imprimir distintos mensajes según sea "admin", "user", "guest".
 
-// 5. Usa typeof para imprimir en consola el tipo de cada una de las
-// siguientes variables: un número, un string, un booleano, un array,
-// un objeto y null.
+// let rol = 'admin';
 
-// let num = 5;
-// let string = 'Hola';
-// let booleano = true;
-// const obj = {nombre: 'carlos', edad: 37};
-// const arr = ['azul', 'negro', 'blanco'];
-// let nulo = null;
+// switch (rol) {
+//     case 'admin':
+//         console.log('Eres admin');
+        
+//         break;
+//     case 'user':
+//         console.log('Eres user');
+            
+//         break;
+//     case 'guest':
+//         console.log('Eres guest');
+                
+//         break;
 
-// console.log(typeof num);
-// console.log(typeof string);
-// console.log(typeof booleano);
-// console.log(typeof obj); //object
-// console.log(typeof arr); //object typeof [] también devuelve "object", pero para saber si es un arreglo se usa: Array.isArray(arr)
-// console.log(typeof nulo); //object typeof null devuelve "object" por un error histórico en JavaScript.
+//     default:
+//         console.log('No eres admin, ni user y ni guest');
+//         break;
+// }
 
-// ¿Por qué no lo corrigieron después?
-// Cuando se dieron cuenta del error, ya había muchísimo código en la web que dependía de ese comportamiento.
-// Si lo cambiaban, se romperían aplicaciones y páginas.
-// Entonces decidieron dejarlo así para siempre (es lo que se llama un legacy bug o error heredado).
+// 4. Usa un for para imprimir los números del 1 al 10.
 
-// La forma correcta de verificar null es con === null.
+// for(let i = 1; i <= 10; i++){
+//     console.log(i);
+// }
 
-// console.log(Array.isArray(arr));
+// 5. Crea una función que reciba un array de edades y use un for para contar cuántas son mayores de edad (>= 18).
+
+// const arrEdades = [13, 45, 70, 18, 5];
+
+// function MayorEdad(arr){
+//     let contador = 0;
+//     for(let i = 0; i < arr.length; i++){
+//         if(arr[i] >= 18) contador++
+//     }
+//     return contador;
+// }
+
+// console.log(MayorEdad(arrEdades));
+
